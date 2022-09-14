@@ -13,7 +13,6 @@
     "com.unity.xr.management": "4.0.7",
     "com.unity.xr.oculus": "1.10.0",
     "com.unity.xr.windowsmr": "4.6.0",
-    "com.veriorpies.parrelsync": "file:C:/Users/Lari/Downloads/ParrelSync-master/ParrelSync-master/ParrelSync",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -44,7 +43,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",    
+    "com.unity.modules.xr": "1.0.0",
     "com.unity.multiplayer.samples.coop": "https://github.com/Unity-Technologies/com.unity.multiplayer.samples.coop.git?path=/Packages/com.unity.multiplayer.samples.coop#main"
   }
 }

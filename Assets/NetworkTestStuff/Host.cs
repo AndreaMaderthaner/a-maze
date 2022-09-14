@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
-using ParrelSync;
 using UnityEngine.SceneManagement;
 public class Host : MonoBehaviour
 {
@@ -11,16 +10,10 @@ public class Host : MonoBehaviour
     {
      
             //Is this unity editor instance opening a clone project?
-            if (ClonesManager.IsClone())
-            {
-                Debug.Log("This is a clone project.");
-                SceneManager.LoadScene("Player2", LoadSceneMode.Single);
-            }
-            else
-            {
+       
             NetworkManager.Singleton.StartHost();
 
-        }
+        
 
     }
 
