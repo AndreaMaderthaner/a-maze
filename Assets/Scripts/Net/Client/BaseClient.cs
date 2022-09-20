@@ -8,7 +8,6 @@ public class BaseClient : MonoBehaviour
 {
     public NetworkDriver driver;
     protected NetworkConnection connection;
-
     private void Start()
     {
         Init();
@@ -74,7 +73,7 @@ public class BaseClient : MonoBehaviour
         switch (opCode)
         {
             case OpCode.CHAT_MESSAGE: msg = new Net_ChatMessage(stream); break;
-            case OpCode.PLAYER_POSITION: msg = new Net_PlayerPosition(stream); break;
+            case OpCode.POSITION_MSG: msg = new Net_PositionMsg(stream); break;
 
             default:
                 Debug.Log("message received had no OpCode");

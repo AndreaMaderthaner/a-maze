@@ -88,7 +88,7 @@ public class BaseServer : MonoBehaviour
         switch (opCode)
         {
             case OpCode.CHAT_MESSAGE: msg = new Net_ChatMessage(stream); break;
-            case OpCode.PLAYER_POSITION: msg = new Net_PlayerPosition(stream); break;
+            case OpCode.POSITION_MSG: msg = new Net_PositionMsg(stream); break;
 
             default:
                 Debug.Log("message received had no OpCode");
@@ -99,9 +99,12 @@ public class BaseServer : MonoBehaviour
     }
     public virtual void SendToClient(NetMessage msg) {
         DataStreamWriter writer;
-        driver.BeginSend(connections[0], out writer);
-        msg.Serialize(ref writer);
-        driver.EndSend(writer);
+        if (connections.Length>0)
+        {
+            driver.BeginSend(connections[0], out writer); //for now only one client
+            msg.Serialize(ref writer);
+            driver.EndSend(writer);
+        }
     }
     public virtual void Shutdown()
     {

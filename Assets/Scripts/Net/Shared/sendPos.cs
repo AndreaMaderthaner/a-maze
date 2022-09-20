@@ -6,21 +6,40 @@ public class sendPos : MonoBehaviour
 {
     // Start is called before the first frame update
     private float lastSend;
-    private BaseClient client;
+    private Vector3 prevPos;
+    private BaseServer server;
+    public bool isPlayer;
+    public int id; //each Enemy or object (objs placed by 2. player) should have a unique id!
+    public float sendInterval = 0.2f;
 
     void Start()
     {
-        client = FindObjectOfType<BaseClient>();
+        server = FindObjectOfType<BaseServer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastSend > 1.0f) //more than 1 sec
+        if (timePassed() && posChanged())
         {
-            Net_PlayerPosition ps = new Net_PlayerPosition(1, transform.position.x, transform.position.y, transform.position.z);
-            client.SendToServer(ps);
+            Net_PositionMsg msg;
+            if (isPlayer)
+                msg = new Net_PositionMsg(objTypeCode.PLAYER, id, transform.position.x, transform.position.y, transform.position.z);
+            else 
+                msg = new Net_PositionMsg(objTypeCode.ENEMY, id, transform.position.x, transform.position.y, transform.position.z);
+            server.SendToClient(msg);
             lastSend = Time.time;
+            prevPos = transform.position;
         }
+    }
+
+    bool timePassed()
+    {
+        return Time.time - lastSend > sendInterval;
+    }
+    bool posChanged()
+    {
+        return prevPos != transform.position;
+
     }
 }
