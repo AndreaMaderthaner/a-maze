@@ -155,25 +155,28 @@ public class MazeGenerator : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKey(KeyCode.LeftControl))
         {
-            Debug.Log("restart");
-            // destroy maze
-            for (var i = 0; i < this.transform.childCount; i++)
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                Destroy(transform.GetChild(i).gameObject);
-            }
-            //destroy maze btns
-            for (var i = 0; i < mazeUI.childCount; i++)
-            {
-                Destroy(mazeUI.GetChild(i).gameObject);
-            }
-            BaseClient.instance.SendToServer(new Net_MsgCode(actionTypeCode.RESTART));
+                Debug.Log("restart");
+                // destroy maze
+                for (var i = 0; i < this.transform.childCount; i++)
+                {
+                    Destroy(transform.GetChild(i).gameObject);
+                }
+                //destroy maze btns
+                for (var i = 0; i < mazeUI.childCount; i++)
+                {
+                    Destroy(mazeUI.GetChild(i).gameObject);
+                }
+                BaseClient.instance.SendToServer(new Net_MsgCode(actionTypeCode.RESTART));
 
-            //reset inventory;
-            Inventory.instance.Reset();
-            WindowUIManager.instance.Reset();
+                //reset inventory;
+                Inventory.instance.Reset();
+                WindowUIManager.instance.Reset();
 
+            }
         }
         //if (Input.GetMouseButtonDown(0) && BaseClient.instance.isConnected)
         //{
