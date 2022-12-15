@@ -31,9 +31,12 @@ public class Inventory : MonoBehaviour
     }
     public void OnMsg(pickUpObjCode objCode, bool use)
     {
-        var item = itemsInScene[objCode];
-        Add(item.GetComponent<ItemPickup>().item);
-        item.SetActive(false);
+        if (!items.Contains(itemsInScene[objCode].GetComponent<ItemPickup>().item))
+        {
+            var item = itemsInScene[objCode];
+            Add(item.GetComponent<ItemPickup>().item);
+            item.SetActive(false);
+        }
     }
     public void Reset()
     {

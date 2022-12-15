@@ -57,10 +57,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.15064535
-  m_Height: 1.4200453
-  m_Direction: 1
-  m_Center: {x: -0.005741314, y: 0.38985908, z: 0.0008512081}
+  m_Radius: 0.034252092
+  m_Height: 0.28275442
+  m_Direction: 2
+  m_Center: {x: -0.005741313, y: -0.0010905564, z: 0.051924497}
 --- !u!1001 &7571657252239258336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,7 +128,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3842646524348985108, guid: b071781f4deb27843b449823a8ac494d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b071781f4deb27843b449823a8ac494d, type: 3}
 --- !u!4 &4829775929194289576 stripped
 Transform:

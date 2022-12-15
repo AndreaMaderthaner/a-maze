@@ -13,7 +13,7 @@ public class Flicker : MonoBehaviour
     void Start()
     {
         light = this.GetComponentInChildren<Light>();
-        InvokeRepeating("flicker", 0.1f, 0.1f);
+        InvokeRepeating("flicker", 0.05f, 0.05f);
     }
 
     private void flicker()

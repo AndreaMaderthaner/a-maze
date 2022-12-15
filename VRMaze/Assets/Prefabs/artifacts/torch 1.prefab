@@ -97,7 +97,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15401566, y: 0.15401565, z: 1.5661167}
+  m_Size: {x: 0.24, y: 0.22, z: 1.51}
   m_Center: {x: -0.0000000037252903, y: 0, z: 0.5969566}
 --- !u!114 &7854589298630496396
 MonoBehaviour:
@@ -14743,8 +14743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7553632549715944439}
   - component: {fileID: 7553632549715944440}
-  - component: {fileID: 7553632549715944438}
-  - component: {fileID: 7210495076543659510}
+  - component: {fileID: 65393937659749123}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -14760,7 +14759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7553632549715944441}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.002676047, y: -0.0030167731, z: 1.1310467}
+  m_LocalPosition: {x: 0.95, y: 0.92, z: -0.22}
   m_LocalScale: {x: 0.7421151, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14779,13 +14778,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9622642, g: 0.83653724, b: 0.22241013, a: 1}
-  m_Intensity: 0.10311068
-  m_Range: 3
+  m_Intensity: 3
+  m_Range: 0.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -14829,7 +14828,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!95 &7553632549715944438
+--- !u!95 &65393937659749123
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -14849,22 +14848,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7210495076543659510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7553632549715944441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9fa16835cadea24aa43fad2c0bdd71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minIntensity: 3
-  maxIntensity: 4
-  minRange: 0.7
-  maxRange: 1
 --- !u!1 &7553632549723715400
 GameObject:
   m_ObjectHideFlags: 0

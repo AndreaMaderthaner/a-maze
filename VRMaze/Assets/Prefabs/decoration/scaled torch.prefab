@@ -19,9 +19,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.087346524
       objectReference: {fileID: 0}
+    - target: {fileID: 977062102521659286, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cc9d23c742e5b46429384c44344bba36, type: 2}
     - target: {fileID: 1442484350669657400, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472446609054620763, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}
+      propertyPath: maxRange
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472446609054620763, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}
+      propertyPath: minRange
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2764141918418126481, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}
       propertyPath: m_IsActive
@@ -111,5 +123,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: scaled torch
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2472446609054620763, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4c7f264a1e4be23439f2afc085f06183, type: 3}

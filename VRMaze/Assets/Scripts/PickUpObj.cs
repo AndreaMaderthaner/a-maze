@@ -5,14 +5,15 @@ using UnityEngine;
 public class PickUpObj : MonoBehaviour
 {
     public pickUpObjCode objCode;
-
+    
   
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Contains("Controller")    )    {
+
             if (objCode == pickUpObjCode.TORCH)
             {
-                GameObject.FindGameObjectWithTag("Intro").SetActive(false);
+                ObjManager.instance.intro.SetActive(false);
             }
             transform.SetParent(other.gameObject.transform);
             transform.localPosition = Vector3.zero;
@@ -21,6 +22,7 @@ public class PickUpObj : MonoBehaviour
             OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
             ObjManager.instance.endVibrationInvoke();
             ObjManager.instance.add(this.gameObject);
+            this.enabled = false;
         }
 
     }

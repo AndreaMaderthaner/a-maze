@@ -554,8 +554,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.6461816, y: 3.6972737, z: 9.651118}
-  m_Center: {x: -0.47792667, y: 2.3215663, z: -0.27822047}
+  m_Size: {x: 7.6461816, y: 2.5413048, z: 9.651118}
+  m_Center: {x: -0.47792673, y: 1.7435819, z: -0.27822056}
 --- !u!111 &1068099852384494095
 Animation:
   m_ObjectHideFlags: 0
@@ -600,11 +600,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   canSeePlayer: 0
+  isBoss: 0
   discoverPlayer: 0
   pathCreator: {fileID: 0}
   distanceToTarget: 0
   speed: 0.3
   sword: {fileID: 2911387718850277872, guid: 1d5eab76bd80d644ab3e4053a2da8cc2, type: 3}
+  lifeBar: {fileID: 0}
+  id: 0
 --- !u!114 &1546499792587913048
 MonoBehaviour:
   m_ObjectHideFlags: 0
